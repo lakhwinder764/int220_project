@@ -16,7 +16,7 @@ session_start();
     <link rel="stylesheet" href="login.css">
     <style>
         body {
-            background-image: url('toshiba.jpg');
+            background-image: url('Mac.jpg');
         }
     </style>
 

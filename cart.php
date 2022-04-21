@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+  <h3>My Cart</h3>
    <div class="row" style="margin-top:30px;margin-left:30px">
        
         <?php
@@ -28,7 +28,7 @@
                 <h4 class="card-title" ><?php echo $result["name"]?></h4>
                     <p class="card-text"><?php echo $result["description"]?></p>
                  
-                    <button ><i class="fa fa-trash" aria-hidden="true"></i></button>
+                   
                     
                 </div>
             </div>
