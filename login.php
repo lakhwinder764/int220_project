@@ -14,11 +14,12 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="login.css">
-<style>
-body{
-   background-image=url("momos.jpg");
-}
-</style>
+    <style>
+        body {
+            background-image: url('toshiba.jpg');
+        }
+    </style>
+
 
 </head>
 
@@ -28,7 +29,7 @@ body{
     if (isset($_POST["submit"])) {
         $email = $_POST["username"];
         $password = $_POST["password"];
-        $email_search = "select * from registration3 where email='$email'";
+        $email_search = "select * from registration where email='$email'";
         $query = mysqli_query($con, $email_search);
         $email_count = mysqli_num_rows($query);
         if ($email_count) {

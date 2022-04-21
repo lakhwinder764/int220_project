@@ -12,11 +12,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <link rel="stylesheet" href="user.scss">
+    <link rel="stylesheet" href="user.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-            background-image: url('momos.jpg');
+            background-image: url('mackbook.jpg');
         }
     </style>
 
@@ -35,7 +35,7 @@
         $pass = password_hash($password, PASSWORD_BCRYPT);
         $cpass = password_hash($confirm_password, PASSWORD_BCRYPT);
 
-        $emailquery = "select * from registration3 where email='$email'";
+        $emailquery = "select * from registration where email='$email'";
         $query = mysqli_query($con, $emailquery);
         $emailcount = mysqli_num_rows($query);
         if ($emailcount > 0) {
@@ -47,7 +47,7 @@
             <?php
         } else {
             if ($password === $confirm_password) {
-                $insertquery = "insert into registration3 values('$first_name','$last_name','$email','$pass','$cpass')";
+                $insertquery = "insert into registration values('$first_name','$last_name','$email','$pass','$cpass')";
                 $iquery = mysqli_query($con, $insertquery);
                 if ($iquery) {
 
